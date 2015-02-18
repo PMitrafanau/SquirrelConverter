@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.menu {
+    margin: 20px;
+}
+
+.tabs-container {
+    margin-bottom: 10px;
+}
+
+.tab {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+.tab.active {
+    background-color: #f0e7ba
+}
+
+.tab:not(.active) {
+    cursor: pointer
+}
+
+#adv-tab-contents {
+  display: none;
+}
+
+.default-val-btn {
+  /*display: none;*/
+}
+
+.form-elements-wrapper {
+  display: inline-block;
+}
+
+.regexp-label {
+  display: block;
+}

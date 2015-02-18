@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+  </head>
+  <body class="menu">
+    <form>
+      <div class="tabs-container">
+        <div class="tab active" tab-contents-id="gen-tab-contents">General</div><!-- This is hack for whitespace
+        --><div class="tab" tab-contents-id="adv-tab-contents">Advanced</div>
+      </div>
+
+      <div id="gen-tab-contents" class="tab-contents">
+        <div>
+          <input type="checkbox" id="enable-conversion">Enable conversion
+        </div>
+
+        <fieldset>
+          <legend>Currency</legend>
+          <div>
+            <input type="radio" name="currency" value="USD" checked>USD&nbsp;
+            <input type="radio" name="currency" value="EUR">EUR
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Rates</legend>
+          <div currency="usd">
+            <label for="rate-usd">USD:&nbsp;</label>
+            <input type="text" id="rate-usd">
+            <input type="button" class="save-val-btn save-rate" value="Save">
+          </div>
+          <div currency="eur">
+            <label for="rate-eur">EUR:&nbsp;</label>
+            <input type="text" id="rate-eur">
+            <input type="button" class="save-val-btn save-rate" value="Save">
+          </div>
+        </fieldset>
+      </div>
+
+      <div id="adv-tab-contents" class="tab-contents">
+        <fieldset>
+          <legend>Conversion propagation</legend>
+          <div>
+            <input type="checkbox" id="enable-iframes">iframes
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hotkey (Enable/disable conversion)</legend>
+          <div>
+            <input type="checkbox" id="enable-conversion-hotkey" class="enable-hotkey">Enable
+          </div>
+          <div>
+            <input type="checkbox" class="shift hotkey-modifier">Shift&nbsp;
+            <input type="checkbox" class="accel hotkey-modifier">Accel&nbsp;
+            <input type="checkbox" class="alt hotkey-modifier">Alt&nbsp;
+            <input type="text" id="hotkey-key" class="key">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Regular expression</legend>
+          <div class="form-elements-wrapper">
+            <label for="regexp-str" class="regexp-label">RegExp string:&nbsp;</label>
+            <label for="regexp-flags" class="regexp-label">RegExp flags:&nbsp;</label>
+          </div>
+          <div class="form-elements-wrapper">
+            <input type="text" id="regexp-str" style="display: block">
+            <input type="text" id="regexp-flags" style="display: block">
+          </div>
+          <div>
+            <input type="button" class="default-val-btn" id="default-regexp" value="Default">
+            <input type="button" class="save-val-btn" id="save-regexp" value="Save">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selector</legend>
+          <div>
+            <label for="selector">Selector:&nbsp;</label>
+            <input type="text" id="selector">
+            <input type="button" class="default-val-btn" id="default-selector" value="Default">
+            <input type="button" class="save-val-btn" id="save-selector" value="Save">
+          </div>
+        </fieldset>
+      </div>
+    </form>
+
+    <script type="application/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="application/javascript" src="menu-common.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="menu-general-tab.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="menu-advanced-tab.js" charset="UTF-8"></script>
+  </body>
+</html>
