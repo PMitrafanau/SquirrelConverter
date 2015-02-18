@@ -1,9 +1,9 @@
 {
   "name": "squirrelconverter",
-  "title": "SquirrelConverter",
+  "title": "Squirrel Converter",
   "id": "jid1-TNHbZ20bxU2uwQ",
-  "description": "a basic add-on",
-  "author": "",
-  "license": "MPL 2.0",
-  "version": "0.1"
+  "description": "The add-on converting BYR to USD/EUR on onliner.by site",
+  "author": "Pavel Mitrofanov <pavel.109.fromBy@gmail.com>",
+  "license": "MIT (http://opensource.org/licenses/MIT)",
+  "version": "0.1a"
 }
