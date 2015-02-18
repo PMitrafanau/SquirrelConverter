@@ -77,9 +77,9 @@ $(function() {
         $('#rate-eur').val(addon.options[RATE_EUR_PROP]);
         $('#enable-iframes').prop('checked', addon.options[CONVERT_IFRAMES_PROP]);
         $('#enable-conversion-hotkey').prop('checked', addon.options[HOTKEY_ENABLED_PROP]);
-        $('.shift .hotkey-modifier').prop('checked', addon.options[HOTKEY_MODIFIERS_PROP] & 4);
-        $('.accel .hotkey-modifier').prop('checked', addon.options[HOTKEY_MODIFIERS_PROP] & 2);
-        $('.alt .hotkey-modifier').prop('checked', addon.options[HOTKEY_MODIFIERS_PROP] & 1);
+        $('.shift .hotkey-modifier').prop('checked', !!(addon.options[HOTKEY_MODIFIERS_PROP] & 4));
+        $('.accel .hotkey-modifier').prop('checked', !!(addon.options[HOTKEY_MODIFIERS_PROP] & 2));
+        $('.alt .hotkey-modifier').prop('checked', !!(addon.options[HOTKEY_MODIFIERS_PROP] & 1));
         $('#hotkey-key').val(addon.options[HOTKEY_KEY_PROP]);
         $('#regexp-str').val(addon.options[REGEXP_STR_PROP]);
         $('#regexp-flags').val(addon.options[REGEXP_FLAGS_PROP]);
